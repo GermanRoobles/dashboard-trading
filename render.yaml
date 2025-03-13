@@ -9,3 +9,18 @@ services:
         value: 3.9
       - key: DASH_DEBUG
         value: 'false'
+      - key: PLOTLY_RENDERER
+        value: 'iframe'
+      - key: DATA_CACHE_DIR
+        value: '/data/cache'
+      - key: REPORTS_DIR
+        value: '/data/reports'
+      - key: CONFIG_DIR
+        value: '/app/configs'
+      - key: TZ
+        value: 'UTC'
+      # Secretos que deberás configurar en el dashboard de Render
+      - key: BINANCE_API_KEY
+        sync: false
+      - key: BINANCE_API_SECRET
+        sync: false
