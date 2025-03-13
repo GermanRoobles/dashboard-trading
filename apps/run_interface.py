@@ -35,6 +35,7 @@ def main():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8050))
     app = create_dashboard(port=port)
+    server = app.server  # This line is important for gunicorn
     app.run_server(
         host='0.0.0.0',
         port=port,
