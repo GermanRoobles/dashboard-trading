@@ -1,0 +1,21 @@
+{
+  "strategy": "optimized",
+  "timeframe": "1h",
+  "rsi": {
+    "window": 14,
+    "oversold": 40,
+    "overbought": 60
+  },
+  "ema": {
+    "short": 9,
+    "long": 21
+  },
+  "holding_time": 4,
+  "trend_filter": true,
+  "volume_filter": true,
+  "use_trailing": true,
+  "partial_exits": false,
+  "market_regime_detection": true,
+  "risk_profile": "moderate",
+  "initial_balance": 100000
+}

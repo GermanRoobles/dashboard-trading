@@ -1,0 +1,20 @@
+{
+  "strategy": "enhanced",
+  "timeframe": "4h",
+  "rsi": {
+    "oversold": 35,
+    "overbought": 65
+  },
+  "ema": {
+    "short": 12,
+    "long": 30
+  },
+  "holding_time": 3,
+  "trend_filter": true,
+  "volume_filter": false,
+  "use_trailing": true,
+  "partial_exits": false,
+  "market_regime_detection": true,
+  "risk_profile": "conservative",
+  "initial_balance": 100000
+}

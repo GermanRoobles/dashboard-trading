@@ -1,0 +1,67 @@
+{
+  "strategy": "ml_hybrid",
+  "timeframe": "1h",
+  "models": {
+    "scalp": {
+      "enabled": true,
+      "threshold": 0.65,
+      "max_trades_per_hour": 2
+    },
+    "swing": {
+      "enabled": true,
+      "threshold": 0.75,
+      "min_holding_time": 4
+    }
+  },
+  "position_sizing": {
+    "scalp": {
+      "base_size": 0.02,
+      "max_size": 0.05
+    },
+    "swing": {
+      "base_size": 0.05,
+      "max_size": 0.1
+    }
+  },
+  "risk_management": {
+    "scalp": {
+      "stop_loss": 0.5,
+      "take_profit": 1.0
+    },
+    "swing": {
+      "stop_loss": 2.0,
+      "take_profit": 4.0,
+      "trailing_stop": true
+    }
+  },
+  "filters": {
+    "minimum_adr": 1.2,
+    "maximum_spread": 0.02,
+    "minimum_volume": 25000000
+  },
+  "rsi": {
+    "window": 14,
+    "oversold": 38,
+    "overbought": 59
+  },
+  "ema": {
+    "short": 9,
+    "long": 21
+  },
+  "risk_controls": {
+    "regime_adjustments": {
+      "ranging": {
+        "position_size_multiplier": 0.8,
+        "threshold_multiplier": 1.2
+      },
+      "volatile": {
+        "position_size_multiplier": 1.2,
+        "threshold_multiplier": 0.9
+      },
+      "trending": {
+        "position_size_multiplier": 1.0,
+        "threshold_multiplier": 1.1
+      }
+    }
+  }
+}

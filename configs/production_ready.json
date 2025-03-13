@@ -1,0 +1,39 @@
+{
+  "strategy": "enhanced",
+  "timeframe": "1h",
+  "rsi": {
+    "oversold": 35,
+    "overbought": 65
+  },
+  "ema": {
+    "short": 10,
+    "long": 25
+  },
+  "holding_time": 4,
+  "trend_filter": true,
+  "volume_filter": true,
+  "use_trailing": true,
+  "partial_exits": true,
+  "market_regime_detection": true,
+  "risk_profile": "conservative",
+  "leverage_range": {
+    "min": 8,
+    "max": 12
+  },
+  "position_size": {
+    "min": 0.02,
+    "max": 0.04
+  },
+  "risk_controls": {
+    "position_reduction": {
+      "start_at_drawdown": 0.015,
+      "reduction_rate": 2.5,
+      "min_size": 0.15
+    },
+    "consecutive_losses": {
+      "max_full_size": 2,
+      "reduction_factor": 0.4
+    }
+  },
+  "initial_balance": 100000
+}

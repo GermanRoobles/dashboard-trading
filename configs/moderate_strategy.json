@@ -1,0 +1,14 @@
+{
+  "risk_profile": "moderate",
+  "position_size": { "min": 0.03, "max": 0.06 },
+  "leverage": { "min": 2, "max": 5 },
+  "rsi": {
+    "window": 14,
+    "oversold": 30,
+    "overbought": 70
+  },
+  "ema": {
+    "short": 9,
+    "long": 21
+  }
+}

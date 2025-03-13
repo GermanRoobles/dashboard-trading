@@ -1,0 +1,28 @@
+{
+  "strategy": "optimized",
+  "timeframe": "15m",
+  "rsi": {
+    "oversold": 42,
+    "overbought": 58
+  },
+  "ema": {
+    "short": 8,
+    "long": 18
+  },
+  "holding_time": 5,
+  "trend_filter": true,
+  "volume_filter": true,
+  "use_trailing": true,
+  "partial_exits": true,
+  "market_regime_detection": true,
+  "risk_profile": "aggressive",
+  "leverage_range": {
+    "min": 10,
+    "max": 18
+  },
+  "position_size": {
+    "min": 0.03,
+    "max": 0.05
+  },
+  "initial_balance": 100000
+}

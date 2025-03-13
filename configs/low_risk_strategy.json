@@ -1,0 +1,75 @@
+{
+  "strategy": "enhanced",
+  "timeframe": "4h",
+  "rsi": {
+    "window": 14,
+    "oversold": 30,
+    "overbought": 70
+  },
+  "ema": {
+    "short": 9,
+    "long": 26
+  },
+  "holding_time": 3,
+  "trend_filter": true,
+  "volume_filter": true,
+  "use_trailing": true,
+  "partial_exits": true,
+  "market_regime_detection": true,
+  "risk_profile": "conservative",
+  "leverage_range": {
+    "min": 5,
+    "max": 10
+  },
+  "position_size": {
+    "min": 0.01,
+    "max": 0.03
+  },
+  "risk_controls": {
+    "position_reduction": {
+      "start_at_drawdown": 0.008,
+      "reduction_rate": 4.0,
+      "min_size": 0.05
+    },
+    "consecutive_losses": {
+      "max_full_size": 1,
+      "reduction_factor": 0.5
+    },
+    "regime_adjustments": {
+      "trending_up": {
+        "position_size_multiplier": 1.0,
+        "holding_time_multiplier": 1.2
+      },
+      "trending_down": {
+        "position_size_multiplier": 0.6,
+        "holding_time_multiplier": 0.5
+      },
+      "ranging": {
+        "position_size_multiplier": 0.8,
+        "holding_time_multiplier": 0.7
+      },
+      "volatile": {
+        "position_size_multiplier": 0.4,
+        "holding_time_multiplier": 0.4
+      }
+    },
+    "max_drawdown": 0.05,
+    "daily_loss_limit": 0.02,
+    "trading_hours": {
+      "active_hours_only": true,
+      "exclude_weekends": true
+    },
+    "recovery_mode": {
+      "activate_at_drawdown": 0.03,
+      "size_reduction": 0.6,
+      "leverage_reduction": 0.5,
+      "min_win_streak_to_exit": 2
+    }
+  },
+  "filters": {
+    "minimum_adr": 0.7,
+    "maximum_spread": 0.03,
+    "minimum_volume": 20000000
+  },
+  "initial_balance": 100000
+}

@@ -1,0 +1,33 @@
+{
+  "strategy": "enhanced",
+  "name": "aggressive_signals",
+  "description": "Strategy focused on generating more trading signals with improved filters",
+  "rsi": {
+    "window": 14,
+    "oversold": 40,
+    "overbought": 60
+  },
+  "ema": {
+    "short": 9,
+    "long": 21
+  },
+  "signal_filters": {
+    "min_rsi_reversal": 2,
+    "min_ema_distance": 0.001,
+    "trend_confirmation": true
+  },
+  "holding_time": 4,
+  "trend_filter": true,
+  "volume_filter": true,
+  "advanced_filters": {
+    "min_volatility": 0.5,
+    "min_volume_multiplier": 1.5,
+    "consolidation_bars": 3
+  },
+  "position_management": {
+    "stop_loss": 1.5,
+    "take_profit": 3.0,
+    "trailing_stop": true,
+    "trailing_activation": 1.0
+  }
+}

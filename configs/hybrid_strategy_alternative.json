@@ -1,0 +1,126 @@
+{
+  "strategy": "enhanced",
+  "timeframe": "4h",
+  "name": "hybrid_strategy",
+  "description": "Hybrid strategy combining low_risk and adaptive with regime adaptation",
+  "rsi": {
+    "window": 14,
+    "oversold": 35,
+    "overbought": 75
+  },
+  "ema": {
+    "short": 8,
+    "long": 21
+  },
+  "holding_time": 2,
+  "trend_filter": true,
+  "volume_filter": true,
+  "use_trailing": true,
+  "partial_exits": true,
+  "market_regime_detection": true,
+  "risk_profile": "conservative",
+  "leverage_range": {
+    "min": 3,
+    "max": 10
+  },
+  "position_size": {
+    "min": 0.01,
+    "max": 0.03,
+    "default": 0.02
+  },
+  "risk_controls": {
+    "position_reduction": {
+      "start_at_drawdown": 0.008,
+      "reduction_rate": 4.0,
+      "min_size": 0.05
+    },
+    "consecutive_losses": {
+      "max_full_size": 1,
+      "reduction_factor": 0.5
+    },
+    "regime_adjustments": {
+      "trending_up": {
+        "position_size_multiplier": 1.0,
+        "holding_time_multiplier": 1.2,
+        "rsi": {
+          "oversold": 35,
+          "overbought": 75
+        }
+      },
+      "trending_down": {
+        "position_size_multiplier": 0.8,
+        "holding_time_multiplier": 0.7,
+        "rsi": {
+          "oversold": 25,
+          "overbought": 65
+        }
+      },
+      "ranging": {
+        "position_size_multiplier": 0.9,
+        "holding_time_multiplier": 0.8,
+        "rsi": {
+          "oversold": 30,
+          "overbought": 70
+        }
+      },
+      "volatile": {
+        "position_size_multiplier": 0.5,
+        "holding_time_multiplier": 0.5,
+        "rsi": {
+          "oversold": 20,
+          "overbought": 80
+        }
+      }
+    },
+    "max_drawdown": 0.05,
+    "daily_loss_limit": 0.02,
+    "trading_hours": {
+      "active_hours_only": true,
+      "exclude_weekends": true
+    },
+    "recovery_mode": {
+      "activate_at_drawdown": 0.03,
+      "size_reduction": 0.6,
+      "leverage_reduction": 0.5,
+      "min_win_streak_to_exit": 2
+    }
+  },
+  "filters": {
+    "minimum_adr": 0.7,
+    "maximum_spread": 0.03,
+    "minimum_volume": 15000000
+  },
+  "initial_balance": 100000,
+  "advanced_exits": {
+    "trailing_activation_pct": 0.7,
+    "trailing_stop_multiplier": 2.0,
+    "partial_exit_levels": [
+      {
+        "pct_target": 0.5,
+        "position_pct": 0.3
+      },
+      {
+        "pct_target": 1.0,
+        "position_pct": 0.3
+      }
+    ],
+    "time_based_exit": {
+      "min_profit_time_exit": 0.3,
+      "max_holding_hours": 36
+    }
+  },
+  "multi_timeframe": {
+    "enabled": true,
+    "confirm_timeframes": [
+      "1h",
+      "1d"
+    ],
+    "signal_alignment_required": true
+  },
+  "market_regime_weights": {
+    "trending_up": 1.2,
+    "trending_down": 0.8,
+    "ranging": 1.0,
+    "volatile": 0.6
+  }
+}

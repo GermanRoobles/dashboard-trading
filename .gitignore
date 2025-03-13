@@ -1,0 +1,76 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment - complete exclusion
+venv/
+venv*/
+.venv/
+env/
+ENV/
+.env
+.env.local
+.env.*.local
+.Python
+*.pyc
+
+# Build and Distribution
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Data and Cache
+data/cache/*
+reports/*
+*.csv
+*.json
+!configs/*.json
+!requirements/*.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Large files and binaries
+*.h5
+*.pickle
+*.pkl
+*.model
+*.joblib
+*.pth
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Keep specific files
+!assets/*.css
+!assets/*.js
+!assets/*.png
+!configs/moderate_strategy.json
+!reports/.gitkeep
+!data/cache/.gitkeep
+
+# Kaleido specific (complete exclusion)
+**/kaleido/
+**/kaleido/**
+**/kaleido/executable/
+**/kaleido/executable/bin/
+**/kaleido/executable/bin/kaleido
